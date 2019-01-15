@@ -1,0 +1,23 @@
+nav {
+  background: #cccccc;
+  padding: 20px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+  div {
+    display: flex;
+
+    a {
+      padding: 0 15px;
+      text-decoration: none;
+      color: #424242;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color ease .3s;
+
+      &:hover {
+        color: #a199ff;
+      }
+    }
+  }
+}
