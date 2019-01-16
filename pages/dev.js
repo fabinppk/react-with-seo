@@ -41,7 +41,6 @@ const User = (props) => (
 );
 
 User.onError = function(e) {
-  console.log(e);
   e.target.onerror = null;
   e.target.src="https:bonitour.com.br/assets/images/sem_imagem.jpg";
 };
@@ -49,7 +48,7 @@ User.onError = function(e) {
 User.getInitialProps = async function(props) {
 
   const requisicao =  {
-                    url: 'http://localhost:3002/api/v3/dev/' + props.query.nome,
+                    url: 'https://api.bonitour.com.br' + '/api/v3/dev/' + props.query.nome,
                     object: {
                       method: 'GET',
                       headers: {

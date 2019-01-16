@@ -28,21 +28,21 @@ const Index = (props) => (
 );
 
 Index.getInitialProps = async function(props) {
-
   const requisicao =  {
-                    url: 'http://localhost:3002/api/v3/devs',
+                    url: 'https://api.bonitour.com.br' + '/api/v3/devs',
                     object: {
                       method: 'GET',
                       headers: {
                         'Accept': 'application/json',
                         'Content-Type': 'application/json',
                         'Authorization': 'eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InRpQGJvbml0b3VyLmNvbS5iciIsImV4cCI6MTU3OTA5MDg3M30.eyLkJgU6YKSuX5HQjuW3oCfl7GEpkKf_mGlQnVod7bY',
-                        'secret_key': 'vSMtK8VnNI97RGxrEFM2Dg'
+                        'secret_key': process.env.REACT_APP_SECRET_KEY
                       }
                     }
                   };
 
   const response = await fetch(requisicao.url, requisicao.object);
+
   const users = await response.json();
   console.log(users);
   return { users: users }

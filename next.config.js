@@ -1,8 +1,11 @@
+require('dotenv').config();
+
 const path = require("path");
 const glob = require("glob");
+const Dotenv = require('dotenv-webpack')
 
 module.exports = {
-  webpack: (config, { dev }) => {
+  webpack: (config) => {
     config.module.rules.push(
       {
         test: /\.(css|scss)/,
@@ -33,6 +36,13 @@ module.exports = {
         ]
       }
     );
+    config.plugins = [
+      ...config.plugins,
+      new Dotenv({
+        path: path.join(__dirname, '.env'),
+        systemvars: true
+      })
+    ]
     return config;
   }
 };
