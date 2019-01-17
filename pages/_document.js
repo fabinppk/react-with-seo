@@ -7,17 +7,17 @@ const DEFAULT_SEO = {
   openGraph: {
     type: 'website',
     locale: 'pt-br',
-    url: 'https://www.garymeehan.ie',
+    url: 'http://desenvolvedores.bonitour.com.br',
     title: 'Desenvolvedores Bonitour',
     description: 'Lista de desenvolvedores que atuam na Bonitour Viagens e Turismo',
     image:
       'https://prismic-io.s3.amazonaws.com/gary-blog%2F3297f290-a885-4cc6-9b19-3235e3026646_default.jpg',
-    site_name: 'GaryMeehan.ie',
+    site_name: 'Desenvolvedores Bonitour Viagens e Turismo',
     imageWidth: 1200,
     imageHeight: 1200
   },
   twitter: {
-    handle: '@garmeeh',
+    handle: '@fabinppk',
     cardType: 'summary_large_image'
   }
 };
