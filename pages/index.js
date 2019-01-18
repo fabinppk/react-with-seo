@@ -4,8 +4,14 @@ import "isomorphic-fetch";
 import Navbar from "../components/Navbar";
 import "../scss/style.scss";
 import NextSeo from 'next-seo';
+import { logPageView, initGA } from '../components/Analytics/index';
 
 export default class Index extends React.Component {
+
+  componentDidMount () {
+    initGA();
+    logPageView();
+  }
 
   static async getInitialProps () {
 

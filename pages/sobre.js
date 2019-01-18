@@ -1,7 +1,13 @@
 import Navbar from "../components/Navbar";
 import NextSeo from 'next-seo';
+import { logPageView, initGA } from '../components/Analytics/index';
 
 export default class Sobre extends React.Component {
+
+  componentDidMount () {
+    initGA();
+    logPageView();
+  }
 
   render() {
     return (

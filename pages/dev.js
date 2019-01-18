@@ -4,8 +4,14 @@ import Navbar from "../components/Navbar";
 import "../scss/style.scss";
 import "../scss/dev.scss";
 import NextSeo from 'next-seo';
+import { logPageView, initGA } from '../components/Analytics/index';
 
 export default class User extends React.Component {
+
+  componentDidMount () {
+    initGA();
+    logPageView();
+  }
 
   static async getInitialProps ({ query: { nome } }) {
     const requisicao =  {
