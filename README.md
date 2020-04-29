@@ -36,10 +36,6 @@ below.
     $ cd react-with-seo
     $ npm i
 
-## Configure app
-
-You will need [`.env`](https://drive.google.com/drive/u/0/folders/1sSLXqe4Go_hdBws89TuZ-m5xHWwVufGT) file on root project.
-
 ## Run project on development mode:
 
 ```
